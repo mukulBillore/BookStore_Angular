@@ -15,4 +15,9 @@ export class LoginComponent implements OnInit {
   onClickRedirectToRegister(){
    this.router.navigate(["register"]);
   }
+  onGoToHome(){
+    this.router.navigate(["home"]);
+  }
+  
+
 }

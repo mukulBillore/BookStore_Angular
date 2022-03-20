@@ -8,14 +8,17 @@ import { LoginComponent } from './MyComponent/login/login.component';
 import { RegisterComponent } from './MyComponent/register/register.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './MyComponent/header/header.component';
+import { HomeComponent } from './MyComponent/home/home.component';
+import { ForgotpasswordComponent } from './MyComponent/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HeaderComponent
-    
+    HeaderComponent,
+    HomeComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
