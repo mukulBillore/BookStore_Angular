@@ -1,17 +1,15 @@
 export class UserRegistrationModel {
-    bookName!: string;
-    authorName!: string;
-    bookDescription!: string;
-    bookImage!: string;
-    price!: number;
-    quantity!: number;
-    
-    constructor(bookName:string,authorName:string,bookDescription:string,bookImage:string,price:number,quantity:number){
-        this.bookDescription=bookDescription;
-        this.bookName=bookName;
-        this.authorName=authorName;
-        this.price=price;
-        this.quantity=quantity;
-        this.bookImage=bookImage;
+    firstName!: string;
+    lastName!: string;
+    email!: string;
+    password!: string;
+    address!: string;
+  
+    constructor(firstName:string,lastName:string,email:string,password:string,address:string){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.email=email;
+        this.password=password;
+        this.address=address;
     }
 }

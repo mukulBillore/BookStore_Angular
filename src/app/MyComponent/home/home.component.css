@@ -1,0 +1,306 @@
+.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin-left: 150px;
+    margin-top: 15px;
+    
+  }
+  
+    
+  .btn {
+    font: normal normal normal 22px/29px Roboto;
+    background-color:#A03037;
+    border: #2E1D1E;
+   color: white;
+    text-align: center;
+    /* font-size: 16px; */
+    margin: 4px 15px;
+    opacity: 1;
+    transition: 0.3s;
+    display: inline-flexbox;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+   
+  }
+  
+
+  form {
+    display: contents;
+    margin-top: 2.5em;
+  }
+
+/* ///// */
+
+.cartlogo{
+  margin-left:70mm;
+  margin-right: 10mm;
+}
+.navbar{
+  color: #ced4da;
+  background-color:#E2E2E2;
+}
+/* awv */
+.logo-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin-left: 150px;
+  margin-top: 15px;
+  
+}
+
+.addressBook-text {
+  font: normal normal  30px/32px Montserrat;
+  text-align: left;
+  letter-spacing: 0px;
+  opacity: 1;
+  color:darkgray;
+  margin-left: 10px;
+  /* margin-right: 20px; */
+}
+
+
+.btn {
+  font: normal normal normal 22px/29px Roboto;
+  background-color:#A03037;
+border: blue;
+ color: white;
+  text-align: center;
+  /* font-size: 16px; */
+  margin: 4px 15px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-flexbox;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+ 
+}
+
+
+.form-inline[_ngcontent-rgt-c48] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+form {
+  display: contents;
+  margin-top: 2.5em;
+}
+.form-control {
+  /* display: block; */
+  
+  display: block;
+  width: 440px;
+  padding: 0.375rem 0.75rem;
+  margin: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.navbar{
+  background-color: #A03037;
+}
+.img{
+  margin-left: 100mm;
+  color: #A03037;
+}
+.cart{
+  color: black;
+}
+
+
+.column-content{
+    font: normal normal normal 22px/29px Roboto;
+    background-color:#A03037;
+    border:#2E1D1E;
+    color: #A03037;
+    text-align: center;
+    margin: 4px 15px;
+    transition: 0.1s;
+    text-decoration: dotted;
+    /* opacity: 1; */
+    /* transition: 0.3s; */
+    /* display: inline-flexbox; */
+    text-decoration:#A03037;
+    cursor: pointer;
+    border-radius: 10px;
+    border:#2E1D1E;
+
+}
+
+.logo-content[_ngcontent-pvo-c49] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-left: 150px; 
+  margin-top: 15px;
+  background-color: #A03037;
+}
+
+.length{
+margin-right: 5mm;
+color: #A03037;
+}
+
+
+
+/* ravi */
+
+.container{
+background-color:white;
+margin-left: 0px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.book-container{
+margin-top: 16px;
+margin-left: 42mm;
+display: flex;
+flex-wrap: wrap;
+}
+.card-container{
+height: auto;
+width: 180px;
+flex:0 0 21%;
+margin-right: 40px;
+margin-bottom: 30px;
+}
+.logo{
+width: 20px;
+height: 20px;
+margin-left: 70px;
+margin-top: 20px;
+}
+.book-image{
+background-color:lightgray;
+}
+.button-container{
+display: flex;
+}
+.card-img-top{
+/* width: 100px;
+height: 120px;
+margin: 25px 10px 20px 40px; */
+display: block;
+margin:auto ;
+width: 50%;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.red{
+font-size: 13px;
+color: white;
+background-color: #2E1D1E;
+height: 50px;
+width: 100px;
+border-color:lightgray;
+border-radius: 5px;
+}
+.green{
+  font-size: 13px;
+color: white;
+background-color: #A03037;
+height: 50px;
+width: 100px;
+border-color:lightgray;
+border-radius: 5px;
+
+}
+.heading{
+display: flex;
+margin-bottom: 20px;
+background-color: #a03037;
+}
+.sortby{
+margin-top: 10px;
+margin-left: 100px;
+height: 30px;
+border-color:#a03037;
+border-radius: 5px;
+}
+.no-of-books{
+font-size: 15px;
+color:darkgray;
+margin-left: 0px;
+margin-top: 15px;
+}
+.search{
+margin-top: 12px;
+border-radius: 5px;
+margin-left: 150px;
+height: 30px;
+width: 350px;
+border-color:#a03037;
+}
+.cart-image{
+width: 30px;
+height: 30px;
+margin: 10px 2px 10px 2px;
+}
+.cart-name{
+margin: 15px 2px 2px 100px;
+color: black;
+}
+.cart-items{
+border-radius: 50%;
+background-color:lightgray;
+height: 20px;
+width: 12px;
+font-weight: bolder;
+margin-top: 15px;
+}
+.sort-ways{
+display: flex;
+margin-bottom: 20px;
+}
+.first-txt{
+bottom:90px;
+position: relative;
+background-color: white;
+text-align: center;
+
+}
+
+.sort-book{
+margin-top: 5px;
+}
+.item-name{
+margin-top:10px;
+}
+
+
+
+
+.card-container[_ngcontent-wgw-c49] {
+    height: auto;
+    width: 180px;
+    flex: 0 0 21%;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+#btn{
+  border-radius: 10%;
+  background-color: #2E1D1E;
+  color: white;
+}
+.column-content{
+
+  border-radius: 10%;
+}

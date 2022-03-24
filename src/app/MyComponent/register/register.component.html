@@ -1,45 +1,48 @@
 <div class="container mt-5 mb-5">
-    <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-md-6">
-            <div class="card px-5 py-5"> <span class="circle"><i class="fa fa-check"></i></span>
+        <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6">
+                        <div class="card px-5 py-5"> <span class="circle"><i class="fa fa-check"></i></span>
 
-                <h3 class="mt-3">    Register </h3><p><br>please enter the details !</p>
+                                <h3 class="mt-3"> Register </h3>
+                                <p><br>please enter the details !</p>
 
-                <div class="form-input"> <i class="fa fa-envelope"></i> <input type="text" class="form-control"
-                        placeholder="Email address"> </div><br>
+                                <div class="form-input"> <i class="fa fa-envelope"></i> <input type="text"
+                                                class="form-control" placeholder="email" [(ngModel)]="userModel.email"> </div><br>
 
-                <div class="form-input"> <i class="fa fa-user"></i> <input type="text" class="form-control"
-                        placeholder="Password"> </div><br>
+                                <div class="form-input"> <i class="fa fa-user"></i> <input type="text"
+                                                class="form-control" placeholder="password" [(ngModel)]="userModel.password"> </div><br>
 
-                <div class="form-input"> <i class="fa fa-user"></i> <input type="text" class="form-control"
-                        placeholder="First name"> </div><br>
+                                <div class="form-input"> <i class="fa fa-user"></i> <input type="text"
+                                                class="form-control" placeholder="first name" [(ngModel)]="userModel.firstName"> </div><br>
 
-                <div class="form-input"> <i class="fa fa-user"></i> <input type="text" class="form-control"
-                        placeholder="Last name"> </div><br>
+                                <div class="form-input"> <i class="fa fa-user"></i> <input type="text"
+                                                class="form-control" placeholder="last name" [(ngModel)]="userModel.lastName"> </div><br>
 
-                <div class="form-input"> <i class="fa fa-lock"></i> <input type="text" class="form-control"
-                        placeholder="address"> </div><br><br>
+                                <div class="form-input"> <i class="fa fa-lock"></i> <input  type="text" [(ngModel)]="userModel.address"
+                                                class="form-control" placeholder="address" > </div><br><br>
 
-                <!-- <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                <!-- <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
                         checked>
 
                     <label class="form-check-label" for="flexCheckChecked"> I agree all the statements
                     </label>
                 </div> -->
-                  
-                <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="onClickRedirectToHome()" >Submit</button>
 
-            
-                <!-- <div class="text-center mt-3"> <span>Or continue with these social profile</span> </div>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit"
+                                        (click)="onClickSaveModelRedirectToHome()">Submit</button>
+
+
+                                <!-- <div class="text-center mt-3"> <span>Or continue with these social profile</span> </div>
                 <div class="d-flex justify-content-center mt-4"> <span class="social"><i
                             class="fa fa-google"></i></span> <span class="social"><i class="fa fa-facebook"></i></span>
                     <span class="social"><i class="fa fa-twitter"></i></span> <span class="social"><i
                             class="fa fa-linkedin"></i></span> </div> -->
 
-                <div class="text-center mt-4"> <span>Already a member?</span> <a href="login"
-                        class="text-decoration-none">Login</a> </div>
+                                <div class="text-center mt-4"> <span>Already a member?</span> <button class="astext"
+                                                (click)="loginPage()">login</button><br><br>
+                                </div>
 
-            </div>
+                        </div>
+                </div>
         </div>
-    </div>
 </div>

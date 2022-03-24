@@ -10,6 +10,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './MyComponent/header/header.component';
 import { HomeComponent } from './MyComponent/home/home.component';
 import { ForgotpasswordComponent } from './MyComponent/forgotpassword/forgotpassword.component';
+import { CartComponent } from './MyComponent/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ForgotpasswordComponent } from './MyComponent/forgotpassword/forgotpass
     RegisterComponent,
     HeaderComponent,
     HomeComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

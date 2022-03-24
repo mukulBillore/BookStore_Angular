@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/bookstoreservice/user.service';
+import { UserRegistrationModel } from 'src/app/Model/user-registration-model';
 
 @Component({
   selector: 'app-register',
@@ -8,12 +10,22 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private service:UserService) { }
 
+   userModel:UserRegistrationModel=new UserRegistrationModel("","","","","");
+  
   ngOnInit(): void {
   }
-  onClickRedirectToHome(){
-  this.router.navigate(["home"]);
+  onClickSaveModelRedirectToHome(){
+    console.log(this.userModel);
+    this.service.registerUser(this.userModel).subscribe((getData:any)=>{
+      console.log(getData)
+    });
+    console.log("user data is sucussfully saved")
+    this.router.navigate(["login"]);
+  }
+  loginPage(){
+    this.router.navigate(["login"]);
   }
 
 }

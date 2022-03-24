@@ -89,3 +89,12 @@ body {
     background-color: rgb(155, 77, 40);
     border-color: rgb(155, 77, 40);
 }
+
+.astext {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color:#3371B5;
+}
