@@ -8,10 +8,10 @@
     width: 600px;
     margin-left: 90mm;
     height: auto;
-    border: 2px solid #a03037;
+    border: 2px solid #2D4159;
     margin-top: 10px;
     border-radius: 5px;
-    background-color:darkgray;
+    background-color:whitesmoke;
   }
   .row{
     height: auto;
@@ -77,7 +77,7 @@
   .heading{
     display: flex;
     margin-bottom: 20px;
-    background-color: #a03037;
+    background-color: #2D4159;
   }
   .search{
     margin-top: 18px;
@@ -150,24 +150,24 @@
   }
   .checkout{
     height: 15mm; 
-    background-color: #2E1D1E; 
+    background-color: #2D4159; 
     color: white;
   }
   .checkout :hover{
     background-color: #a03037 ;
   }
   .navbar{
-    background-color: #a03037 ;
+    background-color:#78244C ;
   }
   .goToHomebtn{
-    background-color: #2E1D1E; 
+    background-color: #2D4159; 
     color: white;
     height: 10mm;
     margin-left: 40mm;
     margin-right:0mm;
   }
   .goTologinbtn{
-    background-color: #2E1D1E; 
+    background-color: #2D4159; 
     height: 10mm;
     color: white;
     margin-left: 10mm;

@@ -1,0 +1,28 @@
+<header style=" background-color:#78244C ;" class="navbar">
+
+  <img style="height: 9.5mm;margin-left: 350mm; margin-right:20mm;" (click)="toHomePage()" class="cartlogo"
+  src="../../../assets/home-4.png" alt="logoutlogo" />
+
+</header>
+
+
+<div class="container">
+    <div class="card mb-3">
+      <br><h5 class="order-title">Order Summary</h5>
+        <div class="row g-0" *ngFor="let ords of cart.data">
+          <div class="col-md-4" >
+            <img [src]="this.imagePath+ords.book.bookImage" class="img-fluid rounded-start" alt="Loading...">
+            <!-- [src]="this.img+this.book.bookImage" -->
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ords.book.bookName}}</h5>
+              <p class="card-text">by {{ords.book.authorName}}</p>
+              <p class="card-text">RS.{{ords.book.price * ords.quantity}}</p>
+            </div>
+          </div>
+        </div> 
+        <p>......................................................................................................</p>
+        <button type="button" class="checkout" (click)="checkout()">Checkout</button> 
+      </div>
+    </div>

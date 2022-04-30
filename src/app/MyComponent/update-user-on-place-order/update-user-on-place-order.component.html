@@ -1,0 +1,77 @@
+<header style=" background-color:#78244C ;" class="navbar">
+
+  <img style="height: 9.5mm;margin-left: 350mm; margin-right:mm;" (click)="toHomePage()" class="cartlogo"
+  src="../../../assets/home-4.png" alt="logoutlogo" />
+
+</header>
+
+
+<div class="container mt-5 mb-5">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-6">
+      <div class="card px-5 py-5"> <span class="circle"><i class="fa fa-check"></i></span>
+        <div class="form-content">
+          <form #myForm="ngForm" novalidate>
+            <div class="form-head">
+              <div class="form-head-text">Customer Details</div>
+            </div>
+            <div class="form-constrains">
+              <div class="row-content">
+                <label for="firstName" class="label text">First Name</label>
+                <br>
+                <input type="text" class="input" pattern="^[a-zA-Z]{4,}$" id="firstName" #firstName="ngModel"
+                  name="firstName" placeholder="Your first name.." autocomplete="off" required
+                  [(ngModel)]="user.firstName">
+                <span class="error" *ngIf="firstName.errors?.['pattern']">
+                  <h6>First Name is Invalid and should be more than 3 characters long</h6>
+                </span>
+                <span class="error" *ngIf="firstName.errors?.['required'] && firstName.touched">
+                  <h6> First Name is Required</h6>
+                </span>
+              </div>
+              <div class="row-content">
+                <label for="lastName" class="label text">Last Name</label>
+                <br>
+                <input type="text" class="input" pattern="^[a-zA-Z]{4,}$" id="lastName" #lastName="ngModel"
+                  name="lastName" placeholder="Your last name.." autocomplete="off" required
+                  [(ngModel)]="user.lastName">
+                <span class="error" *ngIf="lastName.errors?.['pattern']">
+                  <h6>Last Name is Invalid and should be more than 3 characters long</h6>
+                </span>
+                <span class="error" *ngIf="lastName.errors?.['required'] && lastName.touched">
+                  <h6>Last Name is Required</h6>
+                </span>
+              </div>
+              <div class="row-content">
+                <label for="email" class="label text">Email</label>
+                <br>
+                <input type="text" class="input" email id="email" #email="ngModel" name="email"
+                  placeholder="Your Email Id..." autocomplete="off" required [(ngModel)]="user.email">
+                <span class="error" *ngIf="email.errors?.['email']">
+                  <h6>Email is Invalid </h6>
+                </span>
+                <span class="error" *ngIf="email.errors?.['required'] && email.touched">
+                  <h6>Email is Required</h6>
+                </span>
+              </div>
+              <div class="row-content">
+                <label for="address" class="label text">Address</label>
+                <br>
+                <textarea name="address" id="address" placeholder="Your address.." autocomplete="off"
+                  [(ngModel)]="user.address"></textarea>
+                <span class="error"></span>
+              </div>
+              <div class="buttons-contact">
+                <button type="button" class="button button-submit" id="submitButton" [disabled]="!myForm.valid "
+                  (click)="updateUser()">Update</button>
+                <button type="reset" class="button button-reset" id="resetButton">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

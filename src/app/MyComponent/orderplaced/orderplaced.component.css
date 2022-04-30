@@ -1,0 +1,41 @@
+
+  .order-image{
+    position: relative;
+    text-align: center;
+    margin-top:40px;
+  }
+  .order-heading{
+    position:absolute;
+    top:65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .message{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .table-details{
+    margin-top: 30px;
+    margin-left: 270px;
+  }
+  th,td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px 100px 10px 100px ;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  th{
+    background-color: lightgray;
+  }
+  td{
+   border: 1px solid gray;
+  }
+  button{
+    margin-top: 25px;
+    margin-left:200mm;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+  }

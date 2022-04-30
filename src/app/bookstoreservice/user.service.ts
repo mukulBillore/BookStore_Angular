@@ -17,10 +17,22 @@ export class UserService {
     return this.http.get("http://localhost:8080/user/login"+"?email="+email+"&password="+password);
   }
 
+
+  getUserByUserId(id:any){
+    return this.http.get("http://localhost:8080/user/getuserById/"+id);
   
+  }
 
  getloginStatus(email:string, password:string){
     return this.http.get("http://localhost:8080/user/logintest?email="+email+"&password="+password);
+  }
+
+  getUserIdByToken(token:any){
+    return this.http.get("http://localhost:8080/user/getIdByToken/"+token);
+  }
+  
+  getToken(email:string){
+    return this.http.get("http://localhost:8080/user/getToken/"+email);
   }
 
   getUserId(email:string){
@@ -35,5 +47,9 @@ export class UserService {
                 .set('email', email)
                 .set('password', password);
     return this.http.post("http://localhost:8080/user/forgotpassword", params);
+  }
+
+  updateUserRecordById(Id:any,user:any){
+    return this.http.put("http://localhost:8080/user/update/"+Id,user);
   }
 }

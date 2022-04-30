@@ -3,85 +3,71 @@
     <div class="addressBook-text">
 
 
-      <span style="margin-right:5mm; margin-right:0mm ">Books</span>
+      <span style="margin-right:5mm; margin-right:0mm;color:white;">Books</span>
 
       <!-- TO show the totel number of books in the view -->
-      <span style="margin-left:1mm ;margin-right:5mm;">({{books.data.length}})</span>
+      <span style="margin-left:1mm ;margin-right:5mm;color: white;">({{books.data.length}})</span>
       <br />
-      <!-- <span style="margin-top: 10px; color: rgb(141, 145, 148); margin-left: 5px;">({{books.length}} Items)</span> -->
     </div>
 
 
-
+    
     <!-- Search bar is implemented here -->
     <form class="form-inline">
-      <!-- <input class="form-control mr-sm-2" style="margin-left: 3mm;" type="search" placeholder="Search" -->
-        <!-- aria-label="Search" [(ngModel)]="this.see" (click)="searchby()"> -->
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search" [(ngModel)]="this.search" (click)="displayBook()">
+      <input class="form-control mr-sm-2" style="margin-right: 0mm;" type="text" placeholder="Search" aria-label="Search" name="search"
+        [(ngModel)]="this.search"  (input)="searchByBookname()" > 
     </form>
 
 
 
-    <!-- Cart logo is impelmented here and functionality of such the click on logo renders to the cart component  -->
-    <img style="height: 9.5mm; margin-right: 1mm;" (click)="toCartOnClickAddtoBbag()" class="cartlogo"
-      src="../../../assets/supermarket@2x.png" alt="cartlogo" />
+    <img style="height: 9.5mm; margin-right:0; margin-left: 20mm;" (click)="toCartOnClickAddtoBbag()" class="cartlogo"
+      src="../../../assets/cart3.png" alt="cartlogo"/>
 
+      
+      
+    <span style="margin-left: 0mm;margin-right: 5mm;">{{carts.data.length}}</span>
 
-    <span style="margin-left: 0mm;margin-right: 20mm;">{{this.carts.data.length}}</span>
+    <img style="height: 9.5mm;margin-left: 3mm; margin-right: 1mm;"  class="cartlogo"
+    src="../../../assets/wish8.png" (click)="wishlist()" alt="wishlist logo" />
 
-    <!-- Search drop down is implemented here  -->
-    <div class="column-content" placeholder="sort by" saria-labelledby="dropdownMenuButton">
-      <select name="filter" id="filter"  placeholder="sort by" [(ngModel)]="sortby" (change)="sort()">
-        <option  selected value="default">default</option>
-        <option value="Increasing">Increasing price</option>
-        <option value="Decreasing">Descending price</option>
-      </select>
-    </div>
+    <span *ngIf="wishlists.data.length>0" style="margin-left: 1mm;">{{wishlists.data.length}}</span>
+   
+
+        <!-- Search drop down is implemented here  -->
+        <div  style="margin-left:50mm;margin-right: 0%;"   placeholder="sort by" >
+          <select  class="myvalue" name="filter" id="filter" placeholder="sort by" [(ngModel)]="sortby" (change)="sort()">
+            <option  class="select"  selected value="default">default</option>
+            <option class="select" value="Increasing">Increasing price</option>
+            <option class="select" value="Decreasing">Descending price</option>
+          </select>
+        </div>
+    
+
+    
   </div>
-
-
-  <!--  logout button is implemented here  -->
-  <button id="btn" style="height: 8mm ; margin-top:4mm ; margin-right: 10mm;" btn btn-outline-info my-2 my-sm-0 (click)="tologinPage()">logout</button>
-
-
 </header>
 
 
-<!--  Code to show the list of books in the home component in the form of card using ngFor loop -->
-<!-- <div class="book-container">
-  <div class="card card-container" *ngFor="let book of books.data">
+
+<!-- Code to show the list of books in the home component in the form of card using ngFor loop -->
+<div class="book-container">
+  <div class="card card-container" *ngFor="let book of this.books.data">
     <div class="book-image">
       <img [src]="this.imagePath+this.book.bookImage" class="card-img-top" alt="book image logo">
     </div>
     <div class="card-body">
+      <h4 style="color: brown;" *ngIf="book.quantity==0">OUT OF STOCK</h4>
       <h5 class="card-title">{{book.bookName}}</h5>
-      <p class="card-text">aurthor : {{book.authorName}}</p>
+      <h6 class="card-text">Aurthor : {{book.authorName}}</h6>
       <p class="card-text">MRP : {{book.price}} Rs.</p>
       <div class="button-container">
-        <!-- [ngClass]="{'green' : toggle, 'red': !toggle}" -->
-
         <!-- This button addeds the books to cart  -->
-        <!-- <button type="button" class="red" (click)="addToCart(book.bookId)">Add to Bag</button> -->
+        <button type="button" class="red" *ngIf="book.quantity!=0" (click)="addToCart(book.bookId)">Add to Bag</button>
+        <button type="button" style="background-color: silver;" class="red" *ngIf="book.quantity==0">Add to Bag</button>
+        <button type="button" class="red" style="margin-left: 5mm;" (click)="addToWishList(book.bookId)" >Wishlist</button>
+      
         <!-- <button type="button" class="button wishlist">Wishlist</button> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
-<!-- </div> --> 
-<div class="cards">
-  <div class="card" *ngFor="let book of books.data">
-      <img class="img" [src]="book.bookImage" width="80" height="120" alt="image missing.">
-      <div class="text">
-          <p class="bookname">{{book.bookName}}</p>
-          <p class="author">by {{book.authorName}}</p>
-          <p class="rate">Rs.{{book.price}}</p>
-          <div class="button-parent">
-            <span class="button-cart">
-              <button type="submit" id="buttonchange" class="button cart-button">ADD TO BAG</button>
-          </span>
-          <span class="button-wishlist">
-              <button type="submit" id="wishlistButton" class="button wishlist-button" >WISHLIST</button>
-          </span>
       </div>
+    </div>
   </div>
-</div>
 </div>
